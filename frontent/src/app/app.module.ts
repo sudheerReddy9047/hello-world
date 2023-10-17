@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
+import { FormioModule, FormioAppConfig } from 'angular-formio';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { createCustomElement } from '@angular/elements';
   ],
   imports: [
     BrowserModule,
+    FormioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
