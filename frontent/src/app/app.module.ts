@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
 import { FormioModule, FormioAppConfig } from 'angular-formio';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { FormioModule, FormioAppConfig } from 'angular-formio';
   ],
   imports: [
     BrowserModule,
-    FormioModule
+    FormioModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

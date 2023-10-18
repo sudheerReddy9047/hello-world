@@ -1,1 +1,3 @@
-<form-builder [form]="customForm"></form-builder>
+<input type="checkbox" [(ngModel)]="showPreview">Show Preview
+<form-builder [form]="customForm" *ngIf="!showPreview"></form-builder>
+<formio [form]="customForm" *ngIf="showPreview"></formio>
