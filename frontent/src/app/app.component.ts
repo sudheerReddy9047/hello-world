@@ -2469,7 +2469,7 @@ Templates.current.table.form = (e: any) => {
   if (e.component.bordered) {
     table += ' table-sm ';
   }
-  table += `" \n <caption class="sr-only">${e.component.label || 'sa'}</caption>`;
+  // table += `" \n <caption class="sr-only">${e.component.label || 'sa'}</caption>`;
   if (e.component.header && e.component.header.length) {
     table += `\n  <thead>\n    <tr>\n`;
     for (const eachItem of e.component.header) {
