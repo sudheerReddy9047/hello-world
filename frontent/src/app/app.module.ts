@@ -1,14 +1,13 @@
 import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { createCustomElement } from '@angular/elements';
-import { FormioModule, FormioAppConfig } from 'angular-formio';
+import { FormioModule, registerCustomFormioComponent } from 'angular-formio';
 import { FormsModule } from '@angular/forms';
+import { InfoComponent } from './custom-components/info.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -16,14 +15,18 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [InfoComponent]
 })
 export class AppModule {
 
-  constructor(public injector: Injector) { }
-
-  ngDoBootstrap() {
-    const ele = createCustomElement(AppComponent, { injector: this.injector });
-    customElements.define('app-hello-world', ele);
+  constructor(public injector: Injector) {
+    registerCustomFormioComponent({
+      type: 'info',
+      selector: 'info-renderer',
+      title: 'Info',
+      group: 'advanced',
+      icon: 'info-circle',
+      fieldOptions: ['customOptions']
+    }, InfoComponent, injector);
   }
 }
