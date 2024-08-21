@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
 import { FormioModule, FormioAppConfig } from 'angular-formio';
 import { FormsModule } from '@angular/forms';
-
+import './number.js';
 @NgModule({
   declarations: [
     AppComponent
