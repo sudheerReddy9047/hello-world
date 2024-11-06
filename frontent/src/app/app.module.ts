@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
-import { FormioModule, FormioAppConfig } from 'angular-formio';
+import { FormioModule } from 'angular-formio';
 import { FormsModule } from '@angular/forms';
-import './number.js';
+// import './number.js';
 @NgModule({
   declarations: [
     AppComponent
